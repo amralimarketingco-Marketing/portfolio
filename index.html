@@ -1,75 +1,350 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Amr Mohamed Ali — Account Management, Digital Marketing and E-commerce portfolio.">
-  <title>Amr Mohamed Ali — Portfolio</title>
-  <style>
-    :root{--bg:#f6f5f2;--ink:#111827;--muted:#667085;--card:#fff;--line:#e5e7eb;--accent:#111827;--max:1120px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.6}
-    a{color:inherit}.wrap{max-width:var(--max);margin:auto;padding:0 28px}
-    nav{display:flex;justify-content:space-between;align-items:center;padding:28px 0;border-bottom:1px solid var(--line)}
-    nav strong{font-size:18px}nav .links{display:flex;gap:24px;font-size:14px;color:var(--muted)}nav a{text-decoration:none}
-    .hero{padding:92px 0 78px;display:grid;grid-template-columns:1.5fr 1fr;gap:70px;align-items:end}
-    .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:700;color:var(--muted)}
-    h1{font-size:clamp(48px,7vw,88px);line-height:.98;letter-spacing:-.055em;margin:18px 0 28px;max-width:800px}
-    .hero p{font-size:20px;max-width:690px;color:#475467;margin:0}
-    .hero-side{border-left:1px solid var(--line);padding-left:28px;color:var(--muted);font-size:14px}
-    section{padding:72px 0;border-top:1px solid var(--line)}h2{font-size:34px;letter-spacing:-.03em;margin:0 0 12px}.intro{color:var(--muted);max-width:700px;margin-bottom:36px}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;min-height:250px;display:flex;flex-direction:column;justify-content:space-between}
-    .num{font-size:12px;color:var(--muted);font-weight:700}.card h3{font-size:25px;margin:14px 0 8px}.card p{color:#667085;margin:0}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}.tag{border:1px solid var(--line);border-radius:999px;padding:5px 10px;font-size:12px;color:#475467}
-    .about{display:grid;grid-template-columns:1fr 1fr;gap:60px}.list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}.list div{background:#fff;border:1px solid var(--line);padding:14px;border-radius:12px;font-size:14px}
-    .case{display:grid;grid-template-columns:170px 1fr;gap:30px;padding:38px 0;border-top:1px solid var(--line)}.case:first-of-type{border-top:0}.case h3{font-size:28px;margin:0 0 8px}.case .meta{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.case p{color:#475467;margin:8px 0}
-    footer{padding:70px 0}.contact{display:flex;justify-content:space-between;gap:30px;align-items:end}.contact h2{font-size:46px}.contact a{font-weight:700;text-decoration:none;border-bottom:1px solid #111827;padding-bottom:4px}
-    @media(max-width:760px){nav .links{display:none}.hero,.about,.grid{grid-template-columns:1fr}.hero{padding-top:60px;gap:35px}.hero-side{border-left:0;border-top:1px solid var(--line);padding:22px 0 0}.case{grid-template-columns:1fr;gap:10px}.list{grid-template-columns:1fr}.contact{display:block}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Amr Ali — Digital Marketing, Account Management, E-commerce and Growth portfolio. Selected case studies across GCC e-commerce, education, consumer and retail businesses.">
+<title>Amr Ali — Digital Marketing & Growth</title>
+<style>
+:root{
+  --bg:#f5f3ee;--ink:#101721;--muted:#66717f;--line:#ddd9d0;--card:#fffdfa;
+  --navy:#141b2d;--green:#274a37;--lime:#dcefae;--gold:#c79b43;--blue:#2e5b87;
+  --max:1180px;--radius:24px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:auto;padding:0 28px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(245,243,238,.92);backdrop-filter:blur(12px);z-index:20}
+.brand{font-weight:900;letter-spacing:.04em}
+.navlinks{display:flex;gap:24px;font-size:13px;color:var(--muted)}
+.navlinks a{text-decoration:none}
+.navlinks a:hover{color:var(--ink)}
+
+.hero{padding:88px 0 82px;display:grid;grid-template-columns:1.35fr .65fr;gap:70px;align-items:end}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:800;color:var(--muted)}
+h1{font:700 clamp(52px,7.6vw,96px)/.95 Georgia,serif;letter-spacing:-.055em;margin:18px 0 26px;max-width:900px}
+.hero p{font-size:20px;line-height:1.65;color:#475467;max-width:760px;margin:0}
+.hero-side{border-left:1px solid var(--line);padding-left:28px;color:var(--muted);font-size:14px}
+.hero-side strong{display:block;color:var(--ink);font-size:13px;margin-bottom:10px;text-transform:uppercase;letter-spacing:.11em}
+.scope{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:18px}
+.scope .item{padding:16px;border:1px solid var(--line);background:#fffaf1aa;border-radius:16px}
+.scope b{display:block;font-size:24px;color:var(--ink)}
+.scope span{font-size:11px;color:var(--muted)}
+
+section{padding:76px 0;border-top:1px solid var(--line)}
+section h2{font:700 44px/1.05 Georgia,serif;letter-spacing:-.04em;margin:8px 0 10px}
+.intro{max-width:780px;color:var(--muted);margin:0 0 34px}
+
+.case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.case-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;min-height:310px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .25s ease,box-shadow .25s ease}
+.case-card:hover{transform:translateY(-5px);box-shadow:0 18px 50px rgba(16,23,33,.08)}
+.case-card .num{font-size:11px;font-weight:800;color:var(--muted);letter-spacing:.12em}
+.case-card h3{font:700 32px/1.08 Georgia,serif;margin:14px 0 10px;letter-spacing:-.03em}
+.case-card p{color:#596574;margin:0}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:20px}
+.tag{padding:7px 10px;border:1px solid var(--line);border-radius:999px;font-size:11px;color:#4b5562;background:#fff}
+.linkrow{display:flex;gap:12px;align-items:center;margin-top:22px;font-size:13px;font-weight:800}
+.linkrow a{text-decoration:none;border-bottom:1px solid var(--ink)}
+
+.detail{display:grid;grid-template-columns:180px 1fr;gap:28px;padding:44px 0;border-top:1px solid var(--line)}
+.detail:first-of-type{border-top:0}
+.detail .meta{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);font-weight:800}
+.detail h3{font:700 40px/1.05 Georgia,serif;margin:0 0 12px;letter-spacing:-.035em}
+.detail-lead{font-size:18px;color:#475467;max-width:830px;margin:0 0 26px}
+.storygrid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.story{background:#fffaf1cc;border:1px solid var(--line);border-radius:20px;padding:22px}
+.story .k{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:800}
+.story h4{margin:7px 0 7px;font-size:18px}
+.story p{margin:0;color:#596574;font-size:14px}
+
+.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px 0}
+.metric{border:1px solid var(--line);background:#fff;border-radius:18px;padding:18px}
+.metric b{display:block;font-size:26px}
+.metric span{font-size:11px;color:var(--muted)}
+.green{color:var(--green)} .blue{color:var(--blue)} .gold{color:#9a6f18}
+
+.quote{margin:28px 0;padding:26px 26px 24px;border-radius:22px;background:var(--navy);color:#fff}
+.quote .ey{font-size:10px;text-transform:uppercase;letter-spacing:.14em;opacity:.55;margin-bottom:12px}
+.quote blockquote{margin:0;font:500 19px/1.55 Georgia,serif}
+.quote cite{display:block;margin-top:12px;font-style:normal;font-size:11px;opacity:.65}
+.disclosure{font-size:10px;color:#8a8f96;margin-top:10px}
+
+.evidence{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.e-card{border:1px solid var(--line);background:var(--card);border-radius:20px;padding:22px;min-height:180px}
+.e-card h4{margin:0 0 9px;font-size:17px}
+.e-card p{margin:0;color:var(--muted);font-size:13px}
+.mini-chart{margin-top:18px;padding:14px;border-radius:15px;background:#f1f0ea;display:grid;gap:8px}
+.bar{height:8px;border-radius:999px;background:#c9c6bc;position:relative;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:999px;background:var(--blue)}
+.bar.l i{background:var(--green)}
+.bar.g i{background:var(--gold)}
+.mini-label{display:flex;justify-content:space-between;font-size:10px;color:#707781}
+
+.pillrow{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}
+.pill{padding:9px 12px;background:#eef1eb;border-radius:999px;font-size:12px;font-weight:700;color:#395443}
+
+.cap-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cap{background:#fff;border:1px solid var(--line);padding:18px;border-radius:18px}
+.cap b{display:block;margin-bottom:5px}.cap span{font-size:12px;color:var(--muted)}
+
+.experience{display:grid;grid-template-columns:1fr;gap:0}
+.exp{display:grid;grid-template-columns:170px 1fr;gap:26px;padding:24px 0;border-top:1px solid var(--line)}
+.exp:first-child{border-top:0}
+.exp .date{font-size:11px;text-transform:uppercase;letter-spacing:.11em;color:var(--muted);font-weight:800}
+.exp h4{font-size:22px;margin:0 0 6px}.exp p{margin:0;color:var(--muted)}
+
+.contact{display:flex;justify-content:space-between;gap:30px;align-items:end}
+.contact h2{font-size:50px}
+.contactbox p{color:var(--muted);margin:0 0 8px}
+.contactbox a{font-weight:800;text-decoration:none;border-bottom:1px solid var(--ink)}
+
+.footerline{padding:28px 0 48px;color:#8a8f96;font-size:11px;display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line)}
+.smallcaps{text-transform:uppercase;letter-spacing:.12em}
+
+@media(max-width:900px){
+ .hero{grid-template-columns:1fr;gap:34px}.hero-side{border-left:0;border-top:1px solid var(--line);padding:22px 0 0}
+ .case-grid,.storygrid{grid-template-columns:1fr}.evidence{grid-template-columns:1fr 1fr}.cap-grid{grid-template-columns:1fr 1fr}
+ .detail{grid-template-columns:1fr;gap:10px}.metrics{grid-template-columns:1fr 1fr}.contact{display:block}
+}
+@media(max-width:560px){
+ .wrap{padding:0 18px}.navlinks{display:none}.hero{padding:60px 0}.hero p{font-size:18px}
+ h1{font-size:55px}.scope{grid-template-columns:1fr 1fr}.evidence{grid-template-columns:1fr}.cap-grid,.metrics{grid-template-columns:1fr 1fr}
+ section{padding:58px 0}.detail h3{font-size:34px}.contact h2{font-size:40px}
+}
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <nav><strong>AMR ALI</strong><div class="links"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></div></nav>
+<div class="wrap">
+<nav>
+  <div class="brand">AMR ALI</div>
+  <div class="navlinks"><a href="#work">Work</a><a href="#capabilities">Capabilities</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div>
+</nav>
 
-    <header class="hero">
-      <div>
-        <div class="eyebrow">Account Management · Digital Marketing · E-commerce</div>
-        <h1>Marketing that connects the brief to the business.</h1>
-        <p>Digital Marketing & Growth professional with 5+ years of experience across e-commerce, performance marketing, account management and marketing strategy, with a strong focus on GCC markets.</p>
-      </div>
-      <div class="hero-side">
-        <strong>What I bring</strong>
-        <p>Client management, marketing planning, project coordination, performance analysis, e-commerce and account growth — working across clients and creative, media, content, SEO and development teams.</p>
-      </div>
-    </header>
-
-    <section id="work">
-      <div class="eyebrow">Selected work</div>
-      <h2>Case studies</h2>
-      <p class="intro">A selection of projects showing how I approach client challenges, marketing decisions, customer journeys and growth opportunities.</p>
-      <div class="grid">
-        <article class="card"><div><div class="num">01 / ACCOUNT MANAGEMENT</div><h3>Air Care</h3><p>Managing a high-spend Saudi e-commerce account while coordinating strategy, media, creative and commercial priorities.</p></div><div class="tags"><span class="tag">GCC</span><span class="tag">E-commerce</span><span class="tag">Client Management</span></div></article>
-        <article class="card"><div><div class="num">02 / GROWTH STRATEGY</div><h3>IELTS / Abu Omar</h3><p>Expanding an education acquisition strategy by identifying the role of search intent in driving paid bookings.</p></div><div class="tags"><span class="tag">Strategy</span><span class="tag">Search</span><span class="tag">Education</span></div></article>
-        <article class="card"><div><div class="num">03 / CRO</div><h3>Bouncy Toy</h3><p>Tracing a conversion problem beyond advertising and into the product page and customer journey.</p></div><div class="tags"><span class="tag">CRO</span><span class="tag">UX</span><span class="tag">E-commerce</span></div></article>
-        <article class="card"><div><div class="num">04 / E-COMMERCE</div><h3>Eltwkeel</h3><p>Building and scaling an e-commerce business across online and offline operations, from infrastructure to growth.</p></div><div class="tags"><span class="tag">E-commerce</span><span class="tag">Growth</span><span class="tag">Business</span></div></article>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="about">
-        <div><div class="eyebrow">How I work</div><h2>From client need to clear action.</h2><p class="intro">My role often sits between the client and specialist teams: understanding the business problem, turning it into a practical plan, coordinating execution, reviewing performance and finding the next opportunity.</p></div>
-        <div><div class="eyebrow">Core strengths</div><div class="list"><div>Client & Account Management</div><div>Marketing Strategy</div><div>Project Coordination</div><div>Performance Analysis</div><div>E-commerce & CRO</div><div>Account Growth</div><div>Cross-functional Collaboration</div><div>GCC Markets</div></div></div>
-      </div>
-    </section>
-
-    <section>
-      <div class="eyebrow">Experience snapshot</div>
-      <div class="case"><div class="meta">2024–2026</div><div><h3>Makaseb</h3><p>Account Manager, Performance Marketing. Managed 10+ client accounts across e-commerce, education, retail and consumer businesses, with accounts representing SAR 700K+ in advertising spend and SAR 7M+ in tracked revenue.</p></div></div>
-      <div class="case"><div class="meta">2023–Present</div><div><h3>Eltwkeel</h3><p>Founder & E-commerce / Growth Lead. Built the business from a small online store into a multi-channel operation with 2 branches and approximately EGP 3M in annual sales.</p></div></div>
-      <div class="case"><div class="meta">2026</div><div><h3>ZYROS</h3><p>Strategic Marketing Team Member. Contributed to campaign and long-term planning across e-commerce, social media, paid media and retail.</p></div></div>
-    </section>
-
-    <footer id="contact">
-      <div class="contact"><div><div class="eyebrow">Let's connect</div><h2>Open to remote opportunities.</h2></div><div><p>Account Management · Digital Marketing · E-commerce</p><a href="mailto:amralimarketingco@gmail.com">amralimarketingco@gmail.com</a></div></div>
-    </footer>
+<header class="hero">
+  <div>
+    <div class="eyebrow">Account Management · Digital Marketing · E-commerce</div>
+    <h1>Marketing that connects the brief to the business.</h1>
+    <p>Digital Marketing & Growth professional with 5+ years of experience across e-commerce, performance marketing, account management and marketing strategy, with a strong focus on GCC markets.</p>
   </div>
+  <aside class="hero-side">
+    <strong>Selected scope</strong>
+    <div class="scope">
+      <div class="item"><b>5+</b><span>years</span></div>
+      <div class="item"><b>10+</b><span>client accounts</span></div>
+      <div class="item"><b>700K+</b><span>SAR managed ad spend</span></div>
+      <div class="item"><b>7M+</b><span>SAR tracked revenue</span></div>
+    </div>
+  </aside>
+</header>
+
+<section id="work">
+  <div class="eyebrow">Selected work</div>
+  <h2>Problems, decisions, outcomes.</h2>
+  <p class="intro">A flexible collection of case studies and supporting work. The structure is intentionally modular so projects, evidence and new Makaseb accounts can be added without rebuilding the site.</p>
+
+  <div class="case-grid">
+    <article class="case-card">
+      <div><div class="num">01 / ACCOUNT MANAGEMENT</div><h3>Air Care</h3><p>Managing a complex Saudi e-commerce account across performance, e-commerce, client communication and cross-functional execution.</p></div>
+      <div><div class="tags"><span class="tag">GCC</span><span class="tag">E-commerce</span><span class="tag">Client Management</span><span class="tag">Performance</span></div><div class="linkrow"><a href="#aircare">Read case</a></div></div>
+    </article>
+    <article class="case-card">
+      <div><div class="num">02 / GROWTH STRATEGY</div><h3>IELTS / Abu Omar</h3><p>Moving an education account beyond a social-first acquisition setup by identifying search intent as a stronger growth opportunity.</p></div>
+      <div><div class="tags"><span class="tag">Strategy</span><span class="tag">Google Search</span><span class="tag">Education</span></div><div class="linkrow"><a href="#abuomar">Read case</a></div></div>
+    </article>
+    <article class="case-card">
+      <div><div class="num">03 / E-COMMERCE & CRO</div><h3>Alraqia</h3><p>Helping reorganize a large multi-category store and turning a low-converting winning product into a customer-journey problem to solve.</p></div>
+      <div><div class="tags"><span class="tag">CRO</span><span class="tag">UX</span><span class="tag">SEO</span><span class="tag">E-commerce</span></div><div class="linkrow"><a href="#alraqia">Read case</a></div></div>
+    </article>
+    <article class="case-card">
+      <div><div class="num">04 / OFFER STRATEGY</div><h3>MOKNH</h3><p>Challenging a pure-discount launch strategy for a new wellness product and shifting the offer toward trust, gifting and creator-led demand.</p></div>
+      <div><div class="tags"><span class="tag">Consumer Psychology</span><span class="tag">Offer Strategy</span><span class="tag">UGC</span></div><div class="linkrow"><a href="#moknh">Read case</a></div></div>
+    </article>
+    <article class="case-card" style="grid-column:1/-1">
+      <div><div class="num">05 / BUSINESS BUILD</div><h3>Eltwkeel — Building & Scaling an E-commerce Business</h3><p>A founder-led business case covering e-commerce infrastructure, organic growth, supplier strategy, CRM, sales operations, customer experience, B2B, marketplace work and physical expansion.</p></div>
+      <div><div class="tags"><span class="tag">Business</span><span class="tag">E-commerce</span><span class="tag">SEO</span><span class="tag">CRM</span><span class="tag">Operations</span><span class="tag">B2B</span><span class="tag">Expansion</span></div><div class="linkrow"><a href="#eltwkeel">Read case</a></div></div>
+    </article>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Case studies</div>
+  <h2>Selected stories in detail.</h2>
+
+  <article class="detail" id="aircare">
+    <div class="meta">Makaseb · Air Care</div>
+    <div>
+      <h3>Managing a major GCC e-commerce account.</h3>
+      <p class="detail-lead">A broad Saudi appliance business with physical branches and a large online operation. My role sat between the client, performance team and other specialists — turning business needs into practical actions and keeping the account moving.</p>
+      <div class="metrics">
+        <div class="metric"><b class="green">~20x</b><span>reported ROAS on a major account period</span></div>
+        <div class="metric"><b>7 mo.</b><span>approx. account tenure</span></div>
+        <div class="metric"><b>SAR 6.67M</b><span>reported sales in the first 3 months shown in the account report</span></div>
+        <div class="metric"><b>36x</b><span>reported average ROAS for that period</span></div>
+      </div>
+      <div class="storygrid">
+        <div class="story"><div class="k">The challenge</div><h4>Complex account, changing priorities.</h4><p>Hundreds of products, multiple categories, seasonal pressure and a client who needed confidence in both the numbers and the plan.</p></div>
+        <div class="story"><div class="k">My role</div><h4>The link between client and team.</h4><p>Client communication, strategy, performance review, reporting, creative/SEO coordination, recommendations and follow-through.</p></div>
+        <div class="story"><div class="k">A strategic decision</div><h4>Focus a campaign around one AC brand.</h4><p>Instead of accepting a higher acquisition cost as inevitable, I proposed a dedicated landing page, campaign structure, old-data WhatsApp retargeting and dedicated UTM tracking.</p></div>
+        <div class="story"><div class="k">Account management</div><h4>Handling pressure without losing trust.</h4><p>When sales pressure increased, I used proactive communication, a clear roadmap and extra creative support to give the team room to improve the underlying plan.</p></div>
+      </div>
+      <div class="quote">
+        <div class="ey">Representative client feedback</div>
+        <blockquote>“Great experience working with Amr and Sara. They were always responsive, followed up closely, and understood what the project needed. Their support made a real difference in managing the account.”</blockquote>
+        <cite>Abdullah · Air Care</cite>
+        <div class="disclosure">Representative feedback based on the engagement; not presented as a verbatim archived message.</div>
+      </div>
+      <div class="pillrow"><span class="pill">Performance Reporting</span><span class="pill">CRO</span><span class="pill">UTM / Mixpanel</span><span class="pill">Client Retention</span><span class="pill">Creative Coordination</span></div>
+    </div>
+  </article>
+
+  <article class="detail" id="abuomar">
+    <div class="meta">Makaseb · 4ILETS</div>
+    <div>
+      <h3>From social-first to search-led growth.</h3>
+      <p class="detail-lead">The account initially focused on Meta and Snapchat. When results stayed weak, I worked with the team to look beyond the existing setup and identify whether existing search demand could unlock a new acquisition path.</p>
+      <div class="storygrid">
+        <div class="story"><div class="k">The signal</div><h4>Performance needed a new acquisition angle.</h4><p>The client was considering whether to continue the engagement while the initial channel mix was not producing the expected commercial outcome.</p></div>
+        <div class="story"><div class="k">My role</div><h4>I owned the strategic recommendation.</h4><p>Market and competitor analysis, search-demand thinking, keyword research and campaign structure. The media buyer handled hands-on execution inside Google Ads.</p></div>
+        <div class="story"><div class="k">The plan</div><h4>Build Search around intent.</h4><p>Branded, competitor and product-focused Search structure, with PMax as an additional layer, supported by broader content and e-commerce planning.</p></div>
+        <div class="story"><div class="k">Reported outcome</div><h4>200+ bookings in the first month.</h4><p>The new acquisition direction materially changed the account's performance and gave the client a stronger reason to continue the relationship.</p></div>
+      </div>
+      <div class="metrics">
+        <div class="metric"><b>45K</b><span>GA4 active users in the Sep–Dec 2025 snapshot</span></div>
+        <div class="metric"><b>872</b><span>purchases shown in the same GA4 snapshot</span></div>
+        <div class="metric"><b>1,310</b><span>clicks on the Search ad shown</span></div>
+        <div class="metric"><b class="blue">8.01%</b><span>CTR on the shown Search ad</span></div>
+      </div>
+      <div class="pillrow"><span class="pill">Market Analysis</span><span class="pill">Keyword Research</span><span class="pill">Campaign Architecture</span><span class="pill">Client Persuasion</span></div>
+    </div>
+  </article>
+
+  <article class="detail" id="alraqia">
+    <div class="meta">Makaseb · Alraqia / Bouncy Toy</div>
+    <div>
+      <h3>Turning a store problem into a customer-journey problem.</h3>
+      <p class="detail-lead">A large Saudi retailer selling stationery, office supplies and children's toys. We inherited a broad catalog that needed a clearer information architecture — and I later used a winning product to investigate why good funnel activity was not becoming enough sales.</p>
+      <div class="storygrid">
+        <div class="story"><div class="k">Store restructuring</div><h4>Start with the hierarchy.</h4><p>Worked with the Account Director to define a roadmap, then used Salla tools to reorganize categories, product placement and the overall store flow.</p></div>
+        <div class="story"><div class="k">The Bouncy Toy case</div><h4>The funnel looked healthy — sales did not.</h4><p>The product was getting attention and moving through the funnel, but sales were weak. Microsoft Clarity showed sessions spending unusually long on the product page before leaving.</p></div>
+        <div class="story"><div class="k">Hypothesis</div><h4>Maybe customers were missing information.</h4><p>I proposed a short message campaign to hear the real objections instead of guessing from ad metrics alone.</p></div>
+        <div class="story"><div class="k">What we learned</div><h4>The questions were about the product itself.</h4><p>Customers asked whether the electric inflator was included, how installation worked and whether the actual size would match expectations.</p></div>
+      </div>
+      <div class="quote">
+        <div class="ey">Decision path</div>
+        <blockquote>Data → user behaviour → hypothesis → customer questions → product-page improvement.</blockquote>
+        <cite>Alraqia / Bouncy Toy</cite>
+      </div>
+      <div class="pillrow"><span class="pill">Information Architecture</span><span class="pill">Microsoft Clarity</span><span class="pill">Product Page CRO</span><span class="pill">SEO Coordination</span></div>
+    </div>
+  </article>
+
+  <article class="detail" id="moknh">
+    <div class="meta">Makaseb · MOKNH</div>
+    <div>
+      <h3>From price-led offers to value-led growth.</h3>
+      <p class="detail-lead">A new wellness brand with one core product. The initial idea was to win with a lower price than similar products. I challenged the assumption and used the early result to shift the offer toward trust, perceived value and creator-led demand.</p>
+      <div class="metrics">
+        <div class="metric"><b class="green">+25%</b><span>sales uplift after offer repositioning</span></div>
+        <div class="metric"><b>1</b><span>core product</span></div>
+        <div class="metric"><b>UGC</b><span>creator-led credibility</span></div>
+        <div class="metric"><b>Value</b><span>instead of discount-only messaging</span></div>
+      </div>
+      <div class="storygrid">
+        <div class="story"><div class="k">Initial assumption</div><h4>Lower price = easier entry.</h4><p>The client wanted to lead with a stronger discount than comparable products in the market.</p></div>
+        <div class="story"><div class="k">My challenge</div><h4>Could low pricing reduce trust?</h4><p>I believed a very low price for a new health product could create doubt around quality and perceived value for some customers.</p></div>
+        <div class="story"><div class="k">The change</div><h4>Build stronger value signals.</h4><p>After the initial approach underperformed, I proposed branded gift items, stronger creator/UGC activity and credibility-focused awareness work.</p></div>
+        <div class="story"><div class="k">Outcome</div><h4>Short-term sales uplift.</h4><p>The repositioned approach was associated with a <strong>25% sales uplift</strong> over the expected baseline used for this case.</p></div>
+      </div>
+      <div class="linkrow"><a href="https://trymoknh.com/" target="_blank" rel="noreferrer">Visit MOKNH ↗</a><a href="https://www.instagram.com/p/DRKfDiDjNx_/" target="_blank" rel="noreferrer">View creator content ↗</a></div>
+    </div>
+  </article>
+
+  <article class="detail" id="eltwkeel">
+    <div class="meta">Founder · Eltwkeel</div>
+    <div>
+      <h3>Building and scaling an e-commerce business from the ground up.</h3>
+      <p class="detail-lead">Eltwkeel started as a small mattress e-commerce operation. I gradually became responsible for the store, growth strategy, SEO, sales operations, supplier relationships, customer experience, marketplace work and the move into physical retail.</p>
+      <div class="metrics">
+        <div class="metric"><b>2</b><span>physical branches</span></div>
+        <div class="metric"><b>~EGP 3M</b><span>latest full-year sales across online + offline</span></div>
+        <div class="metric"><b>4</b><span>mattress brands in the partner portfolio</span></div>
+        <div class="metric"><b>5.05K</b><span>Google Search Console clicks in the Aug 2025 28-day snapshot</span></div>
+      </div>
+
+      <div class="storygrid">
+        <div class="story"><div class="k">01 · Build</div><h4>The store became the foundation.</h4><p>Built and managed the WordPress/WooCommerce setup, products, product architecture, pricing, payment gateways, shipping logic and conversion improvements.</p></div>
+        <div class="story"><div class="k">02 · Trust</div><h4>Sell advice, not only mattresses.</h4><p>Built a proposition around original products, consultation, inspection, sample models, flexible storage/delivery and a more reassuring buying experience for a high-consideration product.</p></div>
+        <div class="story"><div class="k">03 · Partnerships</div><h4>Reduce supplier concentration risk.</h4><p>Started with Taki, then expanded the partner portfolio to Taki, Habitat, Wonderland and Aldora — evaluating product quality, warranty, delivery, pricing and fit with the brand vision.</p></div>
+        <div class="story"><div class="k">04 · Organic growth</div><h4>Make SEO a cost-efficient growth engine.</h4><p>Managed an SEO team and used recurring reports to build search visibility and organic demand when sustained paid acquisition was difficult to afford.</p></div>
+        <div class="story"><div class="k">05 · Sales operations</div><h4>Build the system around the buying journey.</h4><p>Created a lightweight CRM workflow to organize leads, follow-ups, ownership, order status, payments, shipping and reporting — using automation where it could remove repetitive work.</p></div>
+        <div class="story"><div class="k">06 · Expansion</div><h4>From online to multi-channel.</h4><p>Extended the business into marketplace/Vendor work, B2B opportunities and physical retail, eventually operating with two branches.</p></div>
+      </div>
+
+      <div class="evidence" style="margin-top:22px">
+        <div class="e-card"><h4>SEO evidence</h4><p>Recurring Search Console and SEO reporting across 2024–2025. The Aug 2025 snapshot shows 5.05K clicks, 207K impressions and average position 7.5 for the displayed 28-day period.</p><div class="mini-chart"><div class="mini-label"><span>Clicks</span><b>5.05K</b></div><div class="bar l"><i style="width:72%"></i></div><div class="mini-label"><span>Impressions</span><b>207K</b></div><div class="bar"><i style="width:90%"></i></div></div></div>
+        <div class="e-card"><h4>CRM / sales system</h4><p>A custom internal workflow for lead ownership, next follow-up, order status, payments, shipping and invoices. Built to solve a real operating problem without the cost of a full CRM stack.</p><div class="pillrow"><span class="pill">Lead</span><span class="pill">Follow-up</span><span class="pill">Order</span><span class="pill">Invoice</span></div></div>
+        <div class="e-card"><h4>Partnership proof</h4><p>A formal Taki Vita certificate confirms Eltwkeel as an authorized dealer for 2026. Partner selection also became part of the wider brand and risk strategy.</p><div class="pillrow"><span class="pill">Taki</span><span class="pill">Habitat</span><span class="pill">Wonderland</span><span class="pill">Aldora</span></div></div>
+      </div>
+
+      <div class="quote">
+        <div class="ey">Founder principle</div>
+        <blockquote>Most of the business improvements started with a real customer problem — then became a system, process or service that could work repeatedly.</blockquote>
+        <cite>Eltwkeel · Business case</cite>
+      </div>
+    </div>
+  </article>
+</section>
+
+<section id="capabilities">
+  <div class="eyebrow">Capabilities</div>
+  <h2>What the work proves.</h2>
+  <p class="intro">Each capability is backed by more than one context, so the portfolio can be read by recruiters looking for account management, growth, e-commerce or strategy depth.</p>
+  <div class="cap-grid">
+    <div class="cap"><b>Account Management</b><span>Air Care · 4ILETS · multi-account agency work</span></div>
+    <div class="cap"><b>Marketing Strategy</b><span>4ILETS · MOKNH · Eltwkeel · seasonal plans</span></div>
+    <div class="cap"><b>E-commerce & CRO</b><span>Alraqia · Eltwkeel · product and store optimization</span></div>
+    <div class="cap"><b>Performance Analysis</b><span>Air Care · 4ILETS · reporting and customer-journey analysis</span></div>
+    <div class="cap"><b>SEO & Organic Growth</b><span>Eltwkeel · Alraqia · client SEO coordination</span></div>
+    <div class="cap"><b>Project Coordination</b><span>Media · Creative · Content · SEO · Development teams</span></div>
+    <div class="cap"><b>Customer Journey & CRM</b><span>Clarity insights · Eltwkeel CRM · follow-up systems</span></div>
+    <div class="cap"><b>Account Growth</b><span>Retention · renewals · upselling · expansion opportunities</span></div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="eyebrow">Experience</div>
+  <h2>A quick timeline.</h2>
+  <div class="experience">
+    <div class="exp"><div class="date">Dec 2024 — Mar 2026</div><div><h4>Makaseb · Account Manager, Performance Marketing</h4><p>Managed 10+ client accounts across e-commerce, education, retail and consumer businesses. Led client communication, strategy, planning, performance analysis and cross-functional coordination. Accounts represented SAR 700K+ in advertising spend and SAR 7M+ in tracked revenue.</p></div></div>
+    <div class="exp"><div class="date">2023 — Present</div><div><h4>Eltwkeel · Founder & E-commerce / Growth Lead</h4><p>Built and scaled the business from a small online store into a multi-channel operation with two branches and approximately EGP 3M in latest full-year sales.</p></div></div>
+    <div class="exp"><div class="date">May 2021 — Jun 2022</div><div><h4>EMP Production · Marketing Coordinator</h4><p>Supported market research, campaign planning, creative production and coordination across digital and offline work.</p></div></div>
+  </div>
+</section>
+
+<section>
+  <div class="eyebrow">Supporting work</div>
+  <h2>Strategy, reporting & creative evidence.</h2>
+  <p class="intro">Selected artifacts are treated as evidence inside the relevant story rather than as a gallery of disconnected screenshots.</p>
+  <div class="evidence">
+    <div class="e-card"><h4>Performance Reports</h4><p>Account reporting, performance sheets, ROAS and revenue views used to prepare client discussions and next actions.</p></div>
+    <div class="e-card"><h4>Marketing Plans</h4><p>SWOT, competitor analysis, audience thinking, channel planning, seasonal campaigns and campaign architecture.</p></div>
+    <div class="e-card"><h4>SEO Reports</h4><p>Search Console, SEMrush, content production, product optimization and recurring organic-growth reporting.</p></div>
+    <div class="e-card"><h4>CRM / Systems</h4><p>Custom lead, follow-up, invoice and order workflows built around real operating problems.</p></div>
+    <div class="e-card"><h4>Creative Direction</h4><p>UGC, motion, influencer concepts, product campaigns, trust-building content and visual briefs.</p></div>
+    <div class="e-card"><h4>E-commerce Work</h4><p>Product pages, store architecture, pricing, shipping logic, landing pages, merchandising and conversion improvements.</p></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <div><div class="eyebrow">Let’s connect</div><h2>Open to remote opportunities.</h2></div>
+    <div class="contactbox"><p>Account Management · Digital Marketing · E-commerce</p><a href="mailto:amralimarketingco@gmail.com">amralimarketingco@gmail.com</a></div>
+  </div>
+</section>
+
+<div class="footerline"><span class="smallcaps">AMR ALI · Portfolio</span><span>Modular by design — new projects and evidence can be added without changing the core structure.</span></div>
+</div>
 </body>
 </html>
